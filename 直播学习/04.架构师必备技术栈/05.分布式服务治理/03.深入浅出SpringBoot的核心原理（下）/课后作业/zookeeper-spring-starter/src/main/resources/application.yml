@@ -1,0 +1,17 @@
+spring:
+  curator:
+    connectString: 127.0.0.1
+    retryCount: 3
+    retryIntervalMs: 1000
+    sessionTimeOutMs: 60000
+    connectTimeOutMs: 10000
+    namespace: test-zk-starter
+management:
+  endpoints:
+    web:
+      exposure:
+        include: [info, health]
+  endpoint:
+    health:
+      show-details: always
+
